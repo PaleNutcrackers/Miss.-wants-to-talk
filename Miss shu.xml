@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="a85d9c0f-c689-4c69-98b7-be874f377a5a" Name="小树树也想说话话" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="TTS执行" Id="d1757362-d6da-4ca7-9417-b3ff5d2661a8" RegularExpression="^.{14} 00:00..:(.*)水色照明:(?&lt;KOK&gt;.*)" RefirePeriodExpression="200">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="${KOK}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or">
+          <ConditionSingle Enabled="false" ExpressionL="${RoleName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+        </Condition>
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
